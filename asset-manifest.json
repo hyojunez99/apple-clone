@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/apple-clone/static/css/main.24148fc6.css",
+    "main.js": "/apple-clone/static/js/main.4dc0dc4c.js",
+    "static/media/hero-img.png": "/apple-clone/static/media/hero-img.375880da2c8caf91de76.png",
+    "static/media/camera-img-4.png": "/apple-clone/static/media/camera-img-4.0f777543d8409bd42b64.png",
+    "static/media/camera-img-2.png": "/apple-clone/static/media/camera-img-2.07701ef4342dac1211e7.png",
+    "static/media/camera-img-1.png": "/apple-clone/static/media/camera-img-1.2e4df08a13c9916cc12b.png",
+    "static/media/phone-img.png": "/apple-clone/static/media/phone-img.32381815e49f6e10f95d.png",
+    "static/media/gallery-img-2.png": "/apple-clone/static/media/gallery-img-2.32d739a7ff81c81b1cff.png",
+    "static/media/gallery-img-4.png": "/apple-clone/static/media/gallery-img-4.03e08d3097050a0bc4f7.png",
+    "static/media/gallery-img-3.png": "/apple-clone/static/media/gallery-img-3.337f45ec140e2a06c3a2.png",
+    "static/media/gallery-img-6.png": "/apple-clone/static/media/gallery-img-6.4c8790309ad1512bbbc1.png",
+    "static/media/gallery-img-1.png": "/apple-clone/static/media/gallery-img-1.5f1a4661e7756c40582d.png",
+    "static/media/camera-img-3.png": "/apple-clone/static/media/camera-img-3.6c76f2ac7d826b65f5b3.png",
+    "static/media/gallery-img-5.png": "/apple-clone/static/media/gallery-img-5.970b29b3c019aacfeede.png",
+    "index.html": "/apple-clone/index.html",
+    "main.24148fc6.css.map": "/apple-clone/static/css/main.24148fc6.css.map",
+    "main.4dc0dc4c.js.map": "/apple-clone/static/js/main.4dc0dc4c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.24148fc6.css",
+    "static/js/main.4dc0dc4c.js"
+  ]
+}
