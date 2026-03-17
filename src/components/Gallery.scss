@@ -1,0 +1,62 @@
+@use "../assets/scss/mixin" as *;
+@use "../assets/scss/variables" as *;
+@use "../assets/scss/font" as *;
+
+#gallery {
+  @include flex-layout(column, center, center, 0);
+  padding: 200px 0;
+  position: relative;
+  z-index: 1;
+
+  .gallery-top {
+    @include flex-layout(column, center, center, 4rem);
+    padding-bottom: 18rem;
+    text-align: center;
+
+    h1 {
+      @include font-title;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 220px;
+    }
+
+    .phoneimg {
+      border-radius: 2rem;
+      width: 520px;
+      max-width: 100%;
+      transform: translateZ(0);
+      will-change: transform;
+      box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .gallery-bottom {
+    @include flex-layout(column, center, center, 4rem);
+    padding-bottom: 18rem;
+    text-align: center;
+
+    h1 {
+      @include font-title;
+      letter-spacing: -0.03em;
+      margin-bottom: 220px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+
+      img {
+        width: 100%;
+        max-width: 320px;
+        border-radius: 1.5rem;
+        transition: all 0.4s ease;
+        cursor: pointer;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+        &:hover {
+          transform: scale(1.03);
+        }
+      }
+    }
+  }
+}

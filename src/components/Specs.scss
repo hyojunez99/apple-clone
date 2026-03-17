@@ -1,0 +1,86 @@
+@use "../assets/scss/mixin" as *;
+@use "../assets/scss/variables" as *;
+@use "../assets/scss/font" as *;
+
+#specs {
+  @include flex-layout(column, center, center, 0);
+  padding: 160px 0;
+
+  .specs-title {
+    @include font-title;
+    text-align: center;
+    margin-bottom: 140px;
+    letter-spacing: -0.02em;
+  }
+
+  .spec-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    max-width: 1400px;
+    width: 100%;
+  }
+
+  .spec-card {
+    @include flex-layout(column, flex-start, flex-start, 1.2rem);
+    padding: 2rem;
+    border-radius: 24px;
+    background: linear-gradient(145deg, #ffffff, #f3f3f3);
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition:
+      transform 0.4s ease,
+      box-shadow 0.4s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        300px circle at var(--x, 50%) var(--y, 50%),
+        rgba(255, 255, 255, 0.4),
+        transparent 70%
+      );
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+
+    &:hover {
+      transform: translateY(-12px) scale(1.03) rotateX(4deg) rotateY(-4deg);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+    }
+
+    .spec-icon {
+      width: 44px;
+      height: 44px;
+      margin-bottom: 0.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover .spec-icon {
+      transform: scale(1.1);
+    }
+
+    .spec-card-title {
+      @include font-h3;
+    }
+
+    .spec-card-list {
+      @include flex-layout(column, flex-start, flex-start, 0.4rem);
+      color: var(--text-secondary);
+
+      li {
+        @include font-body;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@use "../assets/scss/mixin" as *;
+@use "../assets/scss/variables" as *;
+@use "../assets/scss/font" as *;
+
+.footer {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  @include flex-layout(row, center, center, 0);
+
+  .footer-inner {
+    width: 100%;
+    max-width: 1200px;
+    padding: 5rem 2rem 3rem;
+  }
+
+  .footer-bottom {
+    @include flex-layout(column, center, center, 1.2rem);
+
+    .footer-logo {
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .footer-links {
+      @include flex-layout(row, center, center, 1.5rem);
+
+      a {
+        @include font-cap;
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+
+    .footer-desc {
+      @include font-cap;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .copyright {
+      @include font-cap;
+      color: rgba(255, 255, 255, 0.35);
+    }
+  }
+}

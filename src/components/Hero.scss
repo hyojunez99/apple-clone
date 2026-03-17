@@ -1,0 +1,44 @@
+@use "../assets/scss/mixin" as *;
+@use "../assets/scss/variables" as *;
+@use "../assets/scss/font" as *;
+
+#hero {
+  @include flex-layout(column, center, center, 0);
+  min-height: 100vh;
+  padding: 140px 0;
+  overflow: hidden;
+  perspective: 1000px;
+
+  .hero-inner {
+    @include flex-layout(column, center, center, 3.5rem);
+    text-align: center;
+  }
+
+  .hero-title {
+    @include font-title;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  .hero-sub {
+    @include font-h2;
+    color: var(--text-secondary);
+    max-width: 600px;
+    opacity: 0.9;
+  }
+
+  .hero-img {
+    width: 480px;
+    max-width: 100%;
+    margin-top: 2rem;
+    transform: translateZ(0);
+    will-change: transform;
+    filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.15));
+    transition: transform 0.4s ease;
+  }
+
+  &:hover .hero-img {
+    transform: scale(1.02);
+  }
+}

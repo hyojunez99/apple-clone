@@ -1,0 +1,46 @@
+[
+  {
+    "id": "1",
+    "title": "Chip",
+    "icon": "specs-icon-1.png",
+    "specs": [
+      "A17 Pro 칩 탑재",
+      "6코어 CPU로 향상된 성능",
+      "6코어 GPU로 강력한 그래픽 처리",
+      "16코어 Neural Engine 지원"
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Display",
+    "icon": "specs-icon-2.png",
+    "specs": [
+      "6.7형 Super Retina XDR 디스플레이",
+      "ProMotion 기술 (최대 120Hz)",
+      "HDR 지원",
+      "최대 밝기 2000 nits"
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Camera",
+    "icon": "specs-icon-3.png",
+    "specs": [
+      "48MP 메인 카메라",
+      "12MP 초광각 렌즈",
+      "12MP 망원 (3배 광학 줌)",
+      "LiDAR 스캐너 탑재"
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Battery",
+    "icon": "specs-icon-4.png",
+    "specs": [
+      "최대 29시간 비디오 재생",
+      "MagSafe 무선 충전 지원",
+      "Qi 무선 충전 지원",
+      "고속 유선 충전 지원"
+    ]
+  }
+]

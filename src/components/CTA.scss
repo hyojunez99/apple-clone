@@ -1,0 +1,57 @@
+@use "../assets/scss/mixin" as *;
+@use "../assets/scss/variables" as *;
+@use "../assets/scss/font" as *;
+
+#cta {
+  @include flex-layout(column, center, center, 3rem);
+  padding: 200px 0;
+  text-align: center;
+
+  background: #000;
+  color: #fff;
+
+  .cta-title {
+    @include font-title;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  .cta-sub {
+    @include font-h2;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+
+  button {
+    padding: 1.2rem 2.5rem;
+    border-radius: 999px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+  }
+
+  .primary {
+    background: var(--accent-blue);
+    color: #fff;
+
+    &:hover {
+      background: var(--accent-blue-hover);
+      transform: scale(1.05);
+    }
+  }
+
+  .secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    backdrop-filter: blur(10px);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.05);
+    }
+  }
+}
