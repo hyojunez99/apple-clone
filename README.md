@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# Apple Product Detail Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 1. 프로젝트 소개
 
-## Available Scripts
+- **설명:**  
+  Apple 스타일의 제품 상세 페이지를 구현한 프로젝트로, 스크롤 기반 인터랙션과 사용자 경험(UX)에 집중하여 구성했습니다.  
+  GSAP과 ScrollTrigger를 활용해 각 섹션이 자연스럽게 연결되도록 설계하고, 단순한 UI 구현을 넘어 몰입감 있는 인터랙션을 구현하는 데 초점을 맞췄습니다.
 
-In the project directory, you can run:
+- **진행 기간:** 2026.03.10 ~ 2026.03.17 (8일)
+- **개발 인원:** 개인 프로젝트
+- **배포 링크:** https://hyojunez99.github.io/apple-clone/
+- **GitHub:** https://github.com/hyojunez99/apple-clone.git
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 2. 사용 기술 스택 (Tech Stack)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React.js
+- JavaScript (ES6+)
+- SCSS
+- GSAP
+- ScrollTrigger
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 3. 기획 및 디자인 (Planning & Design)
 
-### `npm run build`
+- **컨셉:**  
+  Apple 공식 홈페이지의 제품 상세 페이지를 참고하여,  
+  스크롤 흐름에 따라 정보가 자연스럽게 전달되는 인터랙션 중심 UI를 설계했습니다.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Tool:** Figma
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **주요 활동:**
+  - 제품 상세 페이지 레이아웃 및 섹션 흐름 설계
+  - 스크롤 기반 인터랙션 기획 (등장, 패럴럭스, 강조 효과)
+  - 갤러리 UI 및 hover 인터랙션 설계
+  - 반응형 레이아웃 및 타이포그래피 시스템 구성
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 4. 디렉토리 구조
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```text
+src
+│
+├── assets                # 정적 리소스 관리
+│   ├── data              # 프로젝트에 사용되는 JSON 데이터
+│   │
+│   ├── images            # UI 이미지 및 갤러리 이미지
+│   │
+│   └── scss              # 변수, 믹스인 등 전역 스타일 관리
+│
+├── components            # 재사용 가능한 UI 컴포넌트
+│                         # (버튼, 카드, 섹션 등 단위 컴포넌트)
+│
+├── layout                # 헤더, 푸터 등 공통 레이아웃 구성
+│
+├── pages                 # 페이지 단위 컴포넌트
+│                         # (Home, Detail 등 실제 화면 단위)
+│
+├── App.jsx               # 라우팅 및 전체 컴포넌트 구조 관리
+│
+└── index.js              # React 앱 진입점 (렌더링)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 5. 담당 역할
 
-## Learn More
+- **기획 및 디자인**
+  - 전체 UI/UX 설계, 인터랙션 흐름 기획, 반응형 구조 설계
+- **개발:**
+  - React.js 및 SCSS를 활용한 프론트엔드 구현
+  - GSAP 기반 애니메이션 및 스크롤 인터랙션 구현
+  - JSON 기반 프로젝트 데이터 관리 및 컴포넌트 연동
+  - 반응형 웹 구현 및 브라우저 호환성 테스트
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 6. 주요 기능
 
-### Code Splitting
+- GSAP과 ScrollTrigger를 활용한 스크롤 인터랙션 구현
+- 섹션별 등장 애니메이션 및 자연스러운 화면 전환
+- 제품 갤러리 Grid 구성 및 hover 인터랙션 구현
+- Fixed Header 기반 네비게이션 및 스크롤 이동 UX 개선
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 7. 트러블 슈팅
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **문제 1:** GSAP 애니메이션과 CSS hover가 충돌하여 hover 효과가 적용되지 않음
+  - **해결**: GSAP에서 transform을 지속적으로 제어하는 구조를 제거하고, hover는 CSS로 분리하여 충돌 해결
+- **문제 2:** ScrollTrigger가 정상적으로 동작하지 않고 애니메이션이 실행되지 않음
+  - **해결:** trigger start 타이밍을 조정하고, padding 기반 레이아웃을 margin 구조로 변경하여 ScrollTrigger 계산 오류 해결
+- **문제 3:** Fixed Header로 인해 네비게이션 클릭 시 섹션 상단이 가려지는 문제
+  - **해결:** scroll-margin-top을 적용하여 정확한 위치로 스크롤 이동되도록 개선
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 8. 인사이트 (Insights)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- 스크롤 흐름과 인터랙션 타이밍이 사용자 경험에 큰 영향을 준다는 것을 체감했습니다.
+- GSAP과 ScrollTrigger를 활용하며 애니메이션과 레이아웃 구조의 관계를 이해하게 되었고,
+  문제를 단순 수정이 아닌 구조적으로 분석하고 해결하는 능력을 키울 수 있었습니다.
+- 작은 UI 디테일이 전체 완성도를 좌우한다는 점을 경험하며, UX 중심 개발의 중요성을 느꼈습니다.
